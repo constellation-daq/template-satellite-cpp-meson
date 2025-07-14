@@ -1,7 +1,11 @@
 # SPDX-FileCopyrightText: 2025 DESY and the Constellation authors
 # SPDX-License-Identifier: CC0-1.0
 
-project('Template Satellite', ['cpp'], default_options: ['warning_level=3', 'cpp_std=c++20'],)
+project('Template Satellite',
+        ['cpp'],
+        version: '0.1',
+        license: 'EUPL-1.2',
+        default_options: ['warning_level=3', 'cpp_std=c++20'],)
 
 # Setting for Meson template
 satellite_type = 'Template'
