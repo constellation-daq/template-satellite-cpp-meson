@@ -11,8 +11,6 @@ project('Template Satellite',
 satellite_type = 'Template'
 satellite_sources = files('TemplateSatellite.cpp')
 satellite_dependencies = []
-
-
 satellite_generator = files('generator.cpp')
 satellite_main = files('main.cpp')
 
@@ -22,6 +20,15 @@ constellation_sp_opt = [
   'cxx_tools=false',
   'build_gui=none',
 ]
+
+# Configure main.cpp to load DSO from build directory
+build_data = configuration_data()
+build_data.set('builddir', meson.project_build_root())
+satellite_main_conf = configure_file(
+  input: satellite_main,
+  output: 'main.cpp',
+  configuration: build_data,
+)
 
 # Get Constellation dependencies
 satellite_dep = dependency('ConstellationSatellite', default_options: constellation_sp_opt)
@@ -45,7 +52,7 @@ shared_library(
 
 # Create satellite executable
 executable('Satellite' + satellite_type,
-  sources: [satellite_main],
+  sources: [satellite_main_conf],
   dependencies: [exec_dep],
   install: true,
   install_dir: constellation_bindir,
