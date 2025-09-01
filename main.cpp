@@ -7,5 +7,5 @@
 using namespace constellation::exec;
 
 int main(int argc, char** argv) {
-    return satellite_main(to_span(argc, argv), "SatelliteTemplate", SatelliteType("Template"));
+    return satellite_main(to_span(argc, argv), "SatelliteTemplate", SatelliteType("Template", "@builddir@"));
 }
