@@ -8,6 +8,9 @@ category: "Example Templates"
 
 ## First Steps
 
+This is a template for new Constellation satellites, written in C++ and built using the meson build system.
+The following steps help in setting up the new satellite, rename the relevant classes and files, and build the satellite for the first time:
+
 * Rename the satellite using the self-destructing script:
 
   ```sh
