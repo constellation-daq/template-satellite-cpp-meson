@@ -39,6 +39,8 @@ Additional information as well as detailed tutorials on how to implement a new s
   * Update the satellite description, parameter and metric list, custom commands
   * Add a configuration example for easy copy & paste
 
+---
+
 ## Description
 
 This is a detailed description of the satellite and its functionality.
