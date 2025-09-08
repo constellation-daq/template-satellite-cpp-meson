@@ -4,6 +4,8 @@
 title: "Template"
 description: "Template satellite serving as the basis for new developments"
 category: "Example Templates"
+language: "C++"
+parent_class: "TransmitterSatellite"
 ---
 
 ## First Steps
@@ -19,6 +21,10 @@ Additional information as well as detailed tutorials on how to implement a new s
   $ rename-template.py MyName
   ```
 
+* Adjust the satellite base class depending on the target functionality:
+  * `TransmitterSatellite`: This satellite will generate and transmit data during the run
+  * `ReceiverSatellite`: This satellite will receive data during the run
+  * `Satellite`: This satellite will neither send nor receive data via CDTP during the run
 * Implement the satellite code
 * Build the satellite:
 
@@ -27,8 +33,9 @@ Additional information as well as detailed tutorials on how to implement a new s
   $ meson compile -C build/
   ```
 
-* Update this README
+* Update this `README.md`
   * Remove the "First Steps" section
+  * Update the `parent_class` tag in the `README.md` to the satellite base class used in the code
   * Update the satellite description, parameter and metric list, custom commands
   * Add a configuration example for easy copy & paste
 
