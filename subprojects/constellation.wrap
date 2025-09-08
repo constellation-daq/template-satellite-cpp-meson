@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2025 DESY and the Constellation authors
+# SPDX-License-Identifier: CC0-1.0
+
+[wrap-git]
+url = https://gitlab.desy.de/constellation/constellation.git
+revision = HEAD
+depth = 1
+
+[provide]
+dependency_names = ConstellationCore, ConstellationExec, ConstellationSatellite, ConstellationController, ConstellationListener, ConstellationGUI
