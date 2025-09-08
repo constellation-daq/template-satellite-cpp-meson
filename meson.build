@@ -19,6 +19,7 @@ constellation_sp_opt = [
   'cxx_tests=disabled',
   'cxx_tools=false',
   'build_gui=none',
+  'build_satellites=false',
 ]
 
 # Configure main.cpp to load DSO from build directory
