@@ -38,6 +38,8 @@ Additional information as well as detailed tutorials on how to implement a new s
   * Update the `parent_class` tag in the `README.md` to the satellite base class used in the code
   * Update the satellite description, parameter and metric list, custom commands
   * Add a configuration example for easy copy & paste
+  * Add the satellite to the [Constellation Satellite Library](https://constellation.pages.desy.de/satellites/index.html) as
+    described in the [Constellation Application Developer Guide](https://constellation.pages.desy.de/application_development/intro/listing.html)
 
 ---
 
