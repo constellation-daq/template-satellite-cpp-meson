@@ -2,8 +2,8 @@
 # SPDX-FileCopyrightText: 2025 DESY and the Constellation authors
 # SPDX-License-Identifier: CC-BY-4.0 OR EUPL-1.2
 title: "Template"
-description: "Template satellite serving as the basis for new developments"
-category: "Example Templates"
+description: "Satellite base structure serving as the basis for new developments"
+category: "External"
 language: "C++"
 parent_class: "TransmitterSatellite"
 ---
