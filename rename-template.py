@@ -26,6 +26,7 @@ def rename_template(new_type: str) -> None:
     file_replace("Template", new_type, wd.joinpath("main.cpp"))
     file_replace("Template", new_type, wd.joinpath("generator.cpp"))
     file_replace("Template", new_type, wd.joinpath("meson.build"))
+    file_replace("Template", new_type, wd.joinpath("README.md"))
 
     # Rename class files
     os.rename(wd.joinpath("TemplateSatellite.hpp"), wd.joinpath(new_type + "Satellite.hpp"))
