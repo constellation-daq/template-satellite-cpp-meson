@@ -73,8 +73,6 @@ jobs:
   format-reuse:
     name: Run reuse check
     runs-on: ubuntu-latest
-    container:
-      image: fsfe/reuse:latest
     steps:
       - uses: actions/checkout@v4
 
