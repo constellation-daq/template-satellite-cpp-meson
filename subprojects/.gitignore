@@ -1,12 +1,7 @@
 # SPDX-FileCopyrightText: 2025 DESY and the Constellation authors
 # SPDX-License-Identifier: CC0-1.0
 
-# Ignore redirect wrap files
-*.wrap
-!constellation.wrap
-
-# Ignore write lock
-/.wraplock
-
-# Ignore any created folders
-/*/
+# Ignore everything except constellation wrap file
+*
+!/.gitignore
+!/constellation.wrap

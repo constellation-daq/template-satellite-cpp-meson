@@ -1,10 +1,11 @@
 # SPDX-FileCopyrightText: 2025 DESY and the Constellation authors
 # SPDX-License-Identifier: CC0-1.0
 
-[wrap-git]
-url = https://gitlab.desy.de/constellation/constellation.git
-revision = HEAD
-depth = 1
+[wrap-file]
+directory = Constellation-v0.6
+source_url = https://gitlab.desy.de/constellation/constellation/-/releases/v0.6/downloads/Constellation-v0.6.tar.xz
+source_filename = Constellation-v0.6.tar.xz
+source_hash = 422cd6b7344e3e4f86f26b046d8f1ced30c3dc30e55c0b66bb113299fd8c8d07
 
 [provide]
 dependency_names = ConstellationCore, ConstellationExec, ConstellationSatellite, ConstellationController, ConstellationListener, ConstellationGUI
