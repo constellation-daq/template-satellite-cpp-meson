@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: CC0-1.0
 
 [wrap-file]
-directory = Constellation-v0.6.1
-source_url = https://gitlab.desy.de/constellation/constellation/-/releases/v0.6.1/downloads/Constellation-v0.6.1.tar.xz
-source_filename = Constellation-v0.6.1.tar.xz
-source_hash = 8ba45075d0fd823c5950b044f24413b8f02d56d6ce8b5f67ad11f81fe5488e82
+directory = Constellation-v0.7
+source_url = https://gitlab.desy.de/constellation/constellation/-/releases/v0.7/downloads/Constellation-v0.7.tar.xz
+source_filename = Constellation-v0.7.tar.xz
+source_hash = ffe7a5b0aa4afc284d5bb61640d71111a0b1e2db4444bbaab02a57b7923772c6
 
 [provide]
 dependency_names = ConstellationCore, ConstellationExec, ConstellationSatellite, ConstellationController, ConstellationListener, ConstellationGUI
