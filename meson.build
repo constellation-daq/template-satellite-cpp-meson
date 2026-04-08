@@ -16,6 +16,7 @@ satellite_main = files('main.cpp')
 
 # Constellation subproject options
 constellation_sp_opt = [
+  'impl_py=disabled',
   'cxx_tests=disabled',
   'cxx_tools=false',
   'build_gui=none',
