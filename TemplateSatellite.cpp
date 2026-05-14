@@ -16,10 +16,12 @@
 #include "constellation/core/config/Configuration.hpp"
 #include "constellation/satellite/Satellite.hpp"
 
+#include "build_vcs.hpp"
+
 using namespace constellation::config;
 using namespace constellation::satellite;
 
-TemplateSatellite::TemplateSatellite(std::string_view type, std::string_view name) : Satellite(type, name) {}
+TemplateSatellite::TemplateSatellite(std::string_view type, std::string_view name) : Satellite(type, name, VERSION_VCS) {}
 
 void TemplateSatellite::initializing(Configuration& /*config*/) {}
 

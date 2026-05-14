@@ -32,6 +32,8 @@ satellite_main_conf = configure_file(
   configuration: build_data,
 )
 
+build_vcs_hpp = vcs_tag(input: 'build_vcs.hpp', output: 'build_vcs.hpp', fallback: '')
+
 # Get Constellation dependencies
 satellite_dep = dependency('ConstellationSatellite', default_options: constellation_sp_opt)
 exec_dep = dependency('ConstellationExec', default_options: constellation_sp_opt)
@@ -44,7 +46,7 @@ satellite_libdir = constellation_libdir / 'ConstellationSatellites'
 # Create satellite library
 shared_library(
   satellite_type,
-  sources: [satellite_generator, satellite_sources],
+  sources: [satellite_generator, build_vcs_hpp, satellite_sources],
   dependencies: [satellite_dep] + satellite_dependencies,
   gnu_symbol_visibility: 'hidden',
   install: true,
