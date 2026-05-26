@@ -16,6 +16,7 @@ satellite_main = files('main.cpp')
 
 # Constellation subproject options
 constellation_sp_opt = [
+  'impl_py=disabled',
   'cxx_tests=disabled',
   'cxx_tools=false',
   'build_gui=none',
@@ -36,8 +37,8 @@ satellite_dep = dependency('ConstellationSatellite', default_options: constellat
 exec_dep = dependency('ConstellationExec', default_options: constellation_sp_opt)
 
 # Installation directory for satellite
-constellation_bindir = exec_dep.get_variable('bindir', default_value: get_option('bindir'))
-constellation_libdir = exec_dep.get_variable('libdir', default_value: get_option('libdir'))
+constellation_bindir = exec_dep.get_variable('bindir', default_value: get_option('prefix') / get_option('bindir'))
+constellation_libdir = exec_dep.get_variable('libdir', default_value: get_option('prefix') / get_option('libdir'))
 satellite_libdir = constellation_libdir / 'ConstellationSatellites'
 
 # Create satellite library
