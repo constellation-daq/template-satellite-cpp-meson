@@ -7,6 +7,7 @@
 #include <constellation/build.hpp>
 #include <constellation/satellite/Satellite.hpp>
 
+#include "build_vcs.hpp"
 #include "TemplateSatellite.hpp"
 
 #ifdef __clang__
@@ -18,7 +19,7 @@
 extern "C" {
 CNSTLN_DLL_EXPORT
 std::shared_ptr<constellation::satellite::Satellite> generator(std::string_view type, std::string_view name) {
-    return std::make_shared<TemplateSatellite>(type, name);
+    return std::make_shared<TemplateSatellite>(type, name, VERSION_VCS);
 }
 }
 
