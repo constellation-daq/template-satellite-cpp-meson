@@ -4,8 +4,10 @@
 #include <constellation/exec/cli.hpp>
 #include <constellation/exec/satellite.hpp>
 
+#include "build_vcs.hpp"
+
 using namespace constellation::exec;
 
 int main(int argc, char** argv) {
-    return satellite_main(to_span(argc, argv), "SatelliteTemplate", SatelliteType("Template", "@builddir@"));
+    return satellite_main(to_span(argc, argv), "SatelliteTemplate", SatelliteType("Template", VERSION_VCS, "@builddir@"));
 }

@@ -21,6 +21,8 @@ constellation_sp_opt = [
   'cxx_tools=false',
   'build_gui=none',
   'build_satellites=false',
+  'build_controller_lib=false',
+  'build_listener_lib=false',
 ]
 
 # Configure main.cpp to load DSO from build directory
@@ -31,6 +33,11 @@ satellite_main_conf = configure_file(
   output: 'main.cpp',
   configuration: build_data,
 )
+
+build_vcs_hpp = vcs_tag(input: 'build_vcs.hpp.in',
+                        output: 'build_vcs.hpp',
+                        fallback: '',
+                        command: ['git', 'describe', '--tags', ' --always', '--dirty'])
 
 # Get Constellation dependencies
 satellite_dep = dependency('ConstellationSatellite', default_options: constellation_sp_opt)
@@ -44,7 +51,7 @@ satellite_libdir = constellation_libdir / 'ConstellationSatellites'
 # Create satellite library
 shared_library(
   satellite_type,
-  sources: [satellite_generator, satellite_sources],
+  sources: [satellite_generator, build_vcs_hpp, satellite_sources],
   dependencies: [satellite_dep] + satellite_dependencies,
   gnu_symbol_visibility: 'hidden',
   install: true,

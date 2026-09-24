@@ -19,7 +19,8 @@
 using namespace constellation::config;
 using namespace constellation::satellite;
 
-TemplateSatellite::TemplateSatellite(std::string_view type, std::string_view name) : Satellite(type, name) {}
+TemplateSatellite::TemplateSatellite(std::string_view type, std::string_view name, std::string_view version)
+    : Satellite(type, name, version) {}
 
 void TemplateSatellite::initializing(Configuration& /*config*/) {}
 
