@@ -37,7 +37,7 @@ satellite_main_conf = configure_file(
 build_vcs_hpp = vcs_tag(input: 'build_vcs.hpp.in',
                         output: 'build_vcs.hpp',
                         fallback: '',
-                        command: ['git', 'describe', '--tags', ' --always', '--dirty'])
+                        command: ['git', 'describe', '--tags', '--always', '--dirty'])
 
 # Get Constellation dependencies
 satellite_dep = dependency('ConstellationSatellite', default_options: constellation_sp_opt)
