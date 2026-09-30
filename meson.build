@@ -61,7 +61,7 @@ shared_library(
 
 # Create satellite executable
 executable('Satellite' + satellite_type,
-  sources: [satellite_main_conf],
+  sources: [satellite_main_conf, build_vcs_hpp],
   dependencies: [exec_dep],
   install: true,
   install_dir: constellation_bindir,
